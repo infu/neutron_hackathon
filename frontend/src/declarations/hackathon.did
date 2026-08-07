@@ -1,0 +1,1262 @@
+type WithdrawError =
+ variant {
+   BadDestination;
+   Frozen;
+   Locked;
+   NotRegistered;
+   Nothing;
+   Transfer: text;
+ };
+type WeekView =
+ record {
+   entries: vec View;
+   total: nat;
+   week: nat;
+ };
+type WeekPage =
+ record {
+   next: opt nat;
+   rows: vec View;
+   total: nat;
+ };
+type Wallet = principal;
+type View =
+ record {
+   avatar: opt text;
+   displayName: text;
+   entry: Summary;
+   handle: text;
+   judge: bool;
+   mine: bool;
+   title: opt text;
+   voted: bool;
+ };
+type User =
+ record {
+   agent: opt Agent;
+   anonymized: bool;
+   avatar: opt Avatar;
+   bio: text;
+   bytes: nat;
+   createdAt: nat64;
+   displayName: text;
+   frozen: bool;
+   hacker: bool;
+   handle: text;
+   id: nat64;
+   instructions: nat;
+   judgeStatus: JudgeStatus;
+   links: Links;
+   moderator: bool;
+   "principal": principal;
+   rewardOptOut: bool;
+   sponsor: opt Sponsor;
+   sponsorStatus: SponsorStatus;
+   termsAt: nat64;
+   termsVersion: nat;
+   title: opt Title;
+   updatedAt: nat64;
+   wallet: opt Wallet;
+ };
+type Upload =
+ record {
+   name: text;
+   size: nat;
+ };
+type Updates = vec Element__2;
+type UpdateInput =
+ record {
+   note: text;
+   pkg: opt PackageInput;
+   version: text;
+ };
+type Token =
+ record {
+   content_encoding: text;
+   index: nat;
+   key: text;
+   sha256: opt vec nat8;
+ };
+type Title = text;
+type TargetEntryId = nat64;
+type Tally =
+ record {
+   needed: nat;
+   votes: nat;
+ };
+type Summary =
+ record {
+   hasPackage: bool;
+   icon: opt text;
+   id: nat64;
+   links: nat;
+   origin_id: opt nat64;
+   outcome: Outcome;
+   season_id: nat64;
+   shot: opt text;
+   shots: nat;
+   summary: text;
+   takedownAt: nat64;
+   takedownReason: text;
+   title: text;
+   updates: nat;
+   url: text;
+   user_id: nat64;
+   votes: nat;
+   week: nat;
+ };
+type StreamingStrategy = variant {
+                           Callback:
+                            record {
+                              callback: CallbackFunc;
+                              token: Token;
+                            };};
+type Store =
+ record {
+   frontendHash: text;
+   instructionCap: nat;
+   ledgerAllowlist: LedgerAllowlist;
+   ledgerAllowlistSet: bool;
+   nextSeasonUrl: text;
+   registrationOpen: bool;
+   siteTitle: text;
+ };
+type State__3 =
+ variant {
+   failed;
+   paid;
+   planned;
+   sending;
+   skipped;
+ };
+type State__1 =
+ variant {
+   dismissed;
+   fresh;
+   reviewed;
+ };
+type State =
+ variant {
+   approved;
+   expired;
+   pending;
+   rejected;
+ };
+type SponsorTarget =
+ record {
+   expectedStatus: SponsorStatus;
+   expectedUpdatedAt: nat64;
+   id: nat64;
+ };
+type SponsorStatus =
+ variant {
+   approved;
+   no;
+   pending;
+ };
+type SponsorInfo =
+ record {
+   blurb: text;
+   given: Given;
+   ledgers: Ledgers;
+   logo: opt Logo;
+   org: text;
+   website: text;
+ };
+type SponsorApplication =
+ record {
+   blurb: text;
+   ledgers: vec Element__5;
+   logo: opt text;
+   org: text;
+   website: text;
+ };
+type Sponsor =
+ record {
+   blurb: text;
+   given: Given;
+   ledgers: Ledgers;
+   logo: opt Logo;
+   org: text;
+   website: text;
+ };
+type Shots = vec Element__1;
+type Season =
+ record {
+   endedAt: nat64;
+   fundingAttempts: nat;
+   fundingFailures: FundingFailures;
+   fundingReady: bool;
+   id: nat64;
+   number: nat;
+   payout: Payout;
+   phase: Phase;
+   startedAt: nat64;
+   week: nat;
+   weekEndsAt: nat64;
+ };
+type Revision =
+ record {
+   createdAt: nat64;
+   decidedAt: nat64;
+   icon: opt Icon;
+   id: nat64;
+   kind: Kind;
+   links: Links;
+   note: text;
+   pkgKey: opt PkgKey;
+   reason: text;
+   reviewer: opt Reviewer;
+   season_id: nat64;
+   shots: Shots;
+   slug: text;
+   state: State;
+   summary: text;
+   targetEntryId: opt TargetEntryId;
+   title: text;
+   url: text;
+   user_id: nat64;
+   version: text;
+   week: nat;
+ };
+type Reviewer = nat64;
+type Result_9 =
+ variant {
+   err: Error;
+   ok: Season;
+ };
+type Result_8 =
+ variant {
+   err: Error__5;
+   ok: Revision;
+ };
+type Result_7 =
+ variant {
+   err: Error__4;
+   ok: nat;
+ };
+type Result_6 =
+ variant {
+   err: Error__2;
+   ok: Entry;
+ };
+type Result_5 =
+ variant {
+   err: text;
+   ok: User;
+ };
+type Result_4 =
+ variant {
+   err: AutomationError;
+   ok: AutomationWake;
+ };
+type Result_3 =
+ variant {
+   err: WithdrawError;
+   ok: nat;
+ };
+type Result_2 =
+ variant {
+   err: Error__3;
+   ok: User;
+ };
+type Result_17 =
+ variant {
+   err: Error__4;
+   ok: vec record {
+             principal;
+             nat;
+           };
+ };
+type Result_16 =
+ variant {
+   err: Error__6;
+   ok: nat;
+ };
+type Result_15 =
+ variant {
+   err: text;
+   ok: ControllerRecovery;
+ };
+type Result_14 =
+ variant {
+   err: Error__7;
+   ok: Notice;
+ };
+type Result_13 =
+ variant {
+   err: Error__6;
+   ok: Progress;
+ };
+type Result_12 =
+ variant {
+   err: text;
+   ok: vec principal;
+ };
+type Result_11 =
+ variant {
+   err: text;
+   ok;
+ };
+type Result_10 =
+ variant {
+   err: Error__2;
+   ok: User;
+ };
+type Result_1 =
+ variant {
+   err: Error__2;
+   ok;
+ };
+type Result =
+ variant {
+   err: Error;
+   ok: Entry;
+ };
+type Response =
+ record {
+   body: blob;
+   headers: vec HeaderField;
+   status_code: nat16;
+   streaming_strategy: opt StreamingStrategy;
+   upgrade: opt bool;
+ };
+type Request =
+ record {
+   body: blob;
+   certificate_version: opt nat16;
+   headers: vec HeaderField;
+   method: text;
+   url: text;
+ };
+type PublicUser =
+ record {
+   anonymized: bool;
+   avatar: opt text;
+   bio: text;
+   createdAt: nat64;
+   displayName: text;
+   hacker: bool;
+   handle: text;
+   id: nat64;
+   judgeStatus: JudgeStatus;
+   links: vec Link;
+   moderator: bool;
+   sponsor: opt SponsorInfo;
+   sponsorStatus: SponsorStatus;
+   title: opt text;
+   updatedAt: nat64;
+ };
+type PublicPage =
+ record {
+   next: opt Cursor;
+   rows: vec PublicUser;
+   total: nat;
+ };
+type Progress =
+ record {
+   failed: nat;
+   left: nat;
+   paid: nat;
+   skipped: nat;
+ };
+type PkgKey = text;
+type Pkg =
+ record {
+   at: nat64;
+   key: text;
+   name: text;
+   size: nat;
+   version: text;
+ };
+type Phase =
+ variant {
+   draft;
+   finished;
+   running;
+ };
+type Payout__1 =
+ record {
+   attempts: nat;
+   award: Award;
+   block: opt Block;
+   createdAtTime: nat64;
+   dust: nat;
+   entry_id: nat64;
+   fee: nat;
+   gross: nat;
+   id: nat64;
+   ledger: principal;
+   net: nat;
+   note: text;
+   season_id: nat64;
+   state: State__3;
+   to: principal;
+   user_id: nat64;
+ };
+type Payout =
+ variant {
+   approved;
+   failed;
+   none;
+   paid;
+   paying;
+   proposed;
+ };
+type Page =
+ record {
+   next: opt Cursor;
+   rows: vec User;
+   total: nat;
+ };
+type PackageInput = record {key: text;};
+type Outcome =
+ variant {
+   advanced;
+   none;
+   rewarded;
+   won;
+ };
+type OriginId = nat64;
+type Order =
+ variant {
+   bytes;
+   instructions;
+ };
+type Notice =
+ record {
+   at: nat64;
+   body: text;
+   handledAt: nat64;
+   handledBy: opt HandledBy;
+   id: nat64;
+   reporter: principal;
+   state: State__1;
+ };
+type ModeratorTarget =
+ record {
+   expectedOn: bool;
+   expectedUpdatedAt: nat64;
+   id: nat64;
+ };
+type Logo = text;
+type LogPage =
+ record {
+   next: opt Cursor__1;
+   rows: vec EntryView;
+   total: nat;
+ };
+type Links = vec Element;
+type Link =
+ record {
+   kind: text;
+   url: text;
+ };
+type Line =
+ record {
+   attempts: nat;
+   award: Award;
+   block: opt Block;
+   createdAtTime: nat64;
+   displayName: text;
+   dust: nat;
+   entry_id: nat64;
+   fee: nat;
+   gross: nat;
+   handle: text;
+   id: nat64;
+   ledger: principal;
+   net: nat;
+   note: text;
+   season_id: nat64;
+   state: State__3;
+   to: principal;
+   user_id: nat64;
+ };
+type LetterCount =
+ record {
+   count: nat;
+   letter: Letter;
+ };
+type Letter = text;
+type Ledgers = vec Element__5;
+type LedgerAllowlist = vec Element__9;
+type Kind__1 =
+ variant {
+   judge_approved;
+   judge_rejected;
+   judge_reset;
+   judge_revoked;
+   moderator_granted;
+   moderator_revoked;
+   sponsor_approved;
+   sponsor_rejected;
+   sponsor_reset;
+   sponsor_revoked;
+ };
+type Kind =
+ variant {
+   entry;
+   version;
+ };
+type JudgeTarget =
+ record {
+   expectedStatus: JudgeStatus;
+   expectedUpdatedAt: nat64;
+   id: nat64;
+ };
+type JudgeStatus =
+ variant {
+   approved;
+   no;
+   pending;
+ };
+type Input =
+ record {
+   bio: text;
+   displayName: text;
+   handle: text;
+   links: vec Link;
+   terms: bool;
+   title: opt text;
+ };
+type Info =
+ record {
+   chunks: nat;
+   complete: bool;
+   contentEncoding: text;
+   contentType: text;
+   key: text;
+   size: nat;
+ };
+type Icon = text;
+type HeaderField =
+ record {
+   text;
+   text;
+ };
+type HandledBy = nat64;
+type Given = vec Element__4;
+type FundingFailures = vec Element__8;
+type Filter =
+ variant {
+   all;
+   hackers;
+   judges;
+   moderators;
+   observers;
+   pending;
+   sponsors;
+   sponsorsPending;
+ };
+type Error__7 =
+ variant {
+   Db: Error__1;
+   Empty;
+   Full;
+   NotAllowed;
+   NotFound;
+   TooLong: nat;
+   TooSoon: nat;
+ };
+type Error__6 =
+ variant {
+   Db: Error__1;
+   Empty;
+   NoSeason;
+   NotAllowed;
+   NotFinished;
+   WrongPhase: text;
+ };
+type Error__5 =
+ variant {
+   Db: Error__1;
+   Frozen;
+   Invalid: text;
+   NotAllowed;
+   NotFound;
+   NotPending;
+   Season: Error;
+ };
+type Error__4 =
+ variant {
+   Frozen;
+   NoLedger;
+   NoSeason;
+   NotASponsor;
+   NotRegistered;
+   Nothing;
+   TooSoon: nat;
+   Transfer: text;
+ };
+type Error__3 =
+ variant {
+   AlreadyRegistered;
+   Anonymous;
+   Closed;
+   Db: Error__1;
+   Frozen;
+   HandleTaken;
+   Invalid: text;
+   NotRegistered;
+   Settling;
+   Terms;
+ };
+type Error__2 =
+ variant {
+   Db: Error__1;
+   Invalid: text;
+   JudgesFrozen;
+   NeedsSecond: Tally;
+   NoChange;
+   NoProfile;
+   NotAllowed;
+   NotRegistered;
+   SponsorsFrozen;
+ };
+type Error__1 =
+ variant {
+   AlreadyExists: nat64;
+   ConstraintViolation: ConstraintViolation;
+   Internal: text;
+   NotFound: nat64;
+ };
+type Error =
+ variant {
+   AlreadyVoted;
+   Db: Error__1;
+   Distributing;
+   Frozen;
+   Invalid: text;
+   NoSeason;
+   NoWallet;
+   NotAHacker;
+   NotAJudge;
+   NotAllowed;
+   NotFound;
+   NotRegistered;
+   OwnEntry;
+   SeasonRunning;
+   VoteLimit;
+   VoteLocked;
+   WeekClosed;
+ };
+type EntryView =
+ record {
+   at: nat64;
+   by: opt text;
+   byPrincipal: principal;
+   id: nat64;
+   kind: Kind__1;
+   note: opt text;
+   subject: opt text;
+   subjectId: nat64;
+ };
+type EntryInput =
+ record {
+   icon: opt text;
+   links: vec Link;
+   pkg: PackageInput;
+   shots: vec text;
+   slug: text;
+   summary: text;
+   title: text;
+   url: text;
+ };
+type Entry =
+ record {
+   createdAt: nat64;
+   icon: opt Icon;
+   id: nat64;
+   links: Links;
+   origin_id: opt OriginId;
+   outcome: Outcome;
+   pkg: opt Pkg;
+   season_id: nat64;
+   shots: Shots;
+   slug: text;
+   summary: text;
+   takedownAt: nat64;
+   takedownReason: text;
+   title: text;
+   updatedAt: nat64;
+   updates: Updates;
+   url: text;
+   user_id: nat64;
+   votes: nat;
+   week: nat;
+ };
+type Element__9 = principal;
+type Element__8 =
+ record {
+   ledger: principal;
+   reason: text;
+ };
+type Element__5 =
+ record {
+   id: principal;
+   sns: bool;
+ };
+type Element__4 =
+ record {
+   amount: nat;
+   at: nat64;
+   ledger: principal;
+ };
+type Element__2 =
+ record {
+   at: nat64;
+   note: text;
+   upload: opt Upload;
+   version: text;
+ };
+type Element__1 = text;
+type Element =
+ record {
+   kind: text;
+   url: text;
+ };
+type Detail =
+ record {
+   avatar: opt text;
+   detailsEditable: bool;
+   displayName: text;
+   entry: Entry;
+   handle: text;
+   judge: bool;
+   mine: bool;
+   title: opt text;
+   versionsEditable: bool;
+   voted: bool;
+ };
+type Deposit =
+ record {
+   account: Account;
+   ledgers: vec Element__5;
+   subaccount: text;
+ };
+type Cursor__1 = nat64;
+type Cursor = text;
+type Counts =
+ record {
+   hackers: nat;
+   judges: nat;
+   moderators: nat;
+   observers: nat;
+   pending: nat;
+   sponsors: nat;
+   sponsorsPending: nat;
+   users: nat;
+ };
+type ControllerRecovery =
+ record {
+   mine: bool;
+   needed: nat;
+   recovered: bool;
+   votes: nat;
+ };
+type ConstraintViolation =
+ record {
+   field: text;
+   message: text;
+ };
+type Cmd =
+ variant {
+   chunk: record {
+            content: blob;
+            index: nat;
+            key: text;
+          };
+   clear: record {prefix: text;};
+   delete: record {key: text;};
+   store:
+    record {
+      chunks: nat;
+      content: blob;
+      contentEncoding: text;
+      contentType: text;
+      key: text;
+    };
+ };
+type CallbackFunc = func (Token) -> (Callback) query;
+type Callback =
+ record {
+   body: blob;
+   token: opt Token;
+ };
+type Block = nat;
+type Backing =
+ record {
+   context: opt text;
+   mine: bool;
+   needed: nat;
+   votes: nat;
+ };
+type Award =
+ variant {
+   bronze;
+   gold;
+   silver;
+ };
+type Avatar = text;
+type AutomationWake =
+ variant {
+   armed: record {
+            at: nat64;
+            stage: AutomationStage;
+          };
+   busy: record {
+           since: nat64;
+           stage: AutomationStage;
+         };
+   idle;
+   ran: record {
+          nextAt: opt nat64;
+          stage: AutomationStage;
+        };
+   settled;
+ };
+type AutomationStage =
+ variant {
+   funding;
+   payout;
+   round: nat;
+ };
+type AutomationError =
+ variant {
+   NotAllowed;
+   Unavailable;
+ };
+type ApprovalKind =
+ variant {
+   judge;
+   sponsor;
+   takedown;
+ };
+type Agent = principal;
+type Account =
+ record {
+   owner: principal;
+   subaccount: opt blob;
+ };
+/// Neutron Hackathon canister — an AI-powered hackathon for Neutron apps.
+///
+/// Deliberately thin: this file is authorization + dispatch only. All the real
+/// work lives in modules —
+///
+///   lib/Assets.mo    chunked uploads, SHA-256, IC certification, HTTP serving
+///   lib/Painless.mo  IC HTTP gateway types + chunked response plumbing
+///   lib/Profiles.mo  registration and profile rules
+///   lib/Moderation.mo moderator actions + the audit log behind them
+///   lib/Season.mo    the season format: entries, votes, round resolution
+///   lib/Treasury.mo  sponsor deposit addresses and sweeping
+///   .ashroot/lib.mo  database implementation
+service : {
+  am_moderator: () -> (bool) query;
+  /// Opt in to judging. Sets a flag on the caller's existing profile; a
+  /// controller decides. No approval UI by design — do it from the CLI:
+  ///   icp canister call hackathon pending_judges '(50)' --query
+  /// Then pass the returned id, judgeStatus, and updatedAt snapshot to
+  /// `set_judge`; stale snapshots are rejected.
+  apply_as_judge: () -> (Result_2);
+  apply_as_sponsor: (application: SponsorApplication) -> (Result_2);
+  /// Where every pending decision in a queue stands, in one call.
+  ///
+  /// Batched because the alternative is one query per row, and the moderation
+  /// queues are lists — a page of twenty pending judges would be twenty
+  /// round trips to draw twenty buttons. The caller passes the ids it is
+  /// already showing, so this never walks more than the page.
+  ///
+  /// Answers `[]` rather than trapping for a non-moderator: the tallies say
+  /// who is willing to approve whom, which is not public.
+  approval_tallies: (kind: ApprovalKind, subjects: vec nat64) ->
+   (vec record {
+          nat64;
+          Backing;
+        }) query;
+  /// Apply a pending revision to the bracket.
+  approve_revision: (id: nat64) -> (Result_8);
+  assets_count: () -> (nat) query;
+  assets_list: (prefix: text, limit: nat) -> (vec Info) query;
+  /// Frontend bundles, `.neutron` packages, anything site-owned.
+  /// Driven by `scripts/upload.mjs`.
+  assets_upload: (cmd: Cmd) -> (Result_11);
+  /// Spend one of two votes. Not on your own entry.
+  cast_vote: (entryId: nat64) -> (Result);
+  /// Is a week-close actually scheduled?
+  ///
+  /// This reports that the actor installed a timer id. It cannot prove that
+  /// the replica's global timer is still live: after a cycles freeze or a
+  /// congested timer expiry, an id may remain even though no callback will
+  /// arrive. `wake_automation` is the repair path for that case.
+  clock_armed: () -> (bool) query;
+  config: () -> (Store) query;
+  /// Current progress toward the fixed emergency controller recovery.
+  ///
+  /// Only actual moderator account owners may see or cast these approvals.
+  /// Agent delegation is deliberately insufficient for granting controller
+  /// authority.
+  controller_recovery_tally: () -> (opt ControllerRecovery) query;
+  /// The most expensive participants first, by instructions or by bytes.
+  ///
+  /// Moderator-gated: it is a list of who to look at, and publishing it
+  /// would tell somebody probing the canister exactly how well it is going.
+  costliest: (order: Order, limit: nat) -> (vec User) query;
+  /// Draw up this canister's season. **Moderators, and only ever one.** The
+  /// draft is one of the preconditions checked before sealing, so it is
+  /// created while controllers still exist but never requires controller
+  /// authority itself.
+  ///
+  /// `Season.create` refuses a second one outright — the next season is a new
+  /// canister, not another row here (rules.md §1).
+  create_season: () -> (Result_9);
+  /// Erase yourself. Not available while a season is running.
+  ///
+  /// The row survives — see `Profiles.anonymize`. Everything personal on it
+  /// does not, and every app goes with it.
+  ///
+  /// Refused mid-season because a season is a competition in progress: an
+  /// entry vanishing from a week that judges have already voted in changes
+  /// the result, and rules.md §5 makes a closed week a record.
+  delete_account: () -> (Result_5);
+  /// Erase one app, leaving the row that the bracket counts on.
+  delete_app: (entryId: nat64) -> (Result_11);
+  deposit_for: (handle: text) -> (opt Deposit) query;
+  /// Everything about one entry — screenshots, links, package, changelog.
+  /// Fetched when an entry is opened, so the bracket itself stays small.
+  entry_detail: (id: nat64) -> (opt Detail) query;
+  /// Report content that should not be here. No account needed.
+  ///
+  /// Three an hour per calling principal, 500 characters. Anonymous callers
+  /// share one principal and therefore one allowance — that is the limit
+  /// doing its job, not a bug to route around.
+  file_notice: (body: text) -> (Result_14);
+  frontend_asset_keys: () -> (vec text) query;
+  /// A digest over every frontend file this canister serves.
+  ///
+  /// Recompute it from a checkout with `npm run verify:web` and compare. If
+  /// the two agree, the site you are looking at is the build in the
+  /// repository — which is the claim a canister that hosts its own frontend
+  /// ought to be able to support rather than ask you to take on trust.
+  ///
+  /// Computed on demand rather than cached: it walks the frontend's own
+  /// keys, which number in the tens, and a cached value is one more thing
+  /// that can silently drift from what is actually being served.
+  frontend_hash: () -> (text) query;
+  funding_closing: () -> (bool) query;
+  http_request: (request: Request) -> (Response) query;
+  http_request_streaming_callback: (token: Token) -> (Callback) query;
+  is_controller: () -> (bool) query;
+  /// True from the moment a season starts until it finishes. While set, no
+  /// moderator can change the judges.
+  judges_frozen: () -> (bool) query;
+  /// Did this installed actor begin the irreversible seal transition?
+  ///
+  /// A self-only controller list alone cannot distinguish `seal_canister()`
+  /// from an operator changing settings by hand. This durable,
+  /// read-only witness lets the release verifier require both facts. It
+  /// grants no recovery authority. A confirmed failed attempt resets it while
+  /// controllers still remain; after successful removal it stays true until
+  /// a season starts, when the running phase becomes the durable boundary.
+  launch_latched: () -> (bool) query;
+  /// Per-bucket counts for the A-Z strip, so it can show what exists
+  /// without the client fetching any rows.
+  letter_counts: (filter: Filter) -> (vec LetterCount) query;
+  me: () -> (opt User) query;
+  /// Where this canister's memory has gone.
+  ///
+  /// Public on purpose: it is the number that decides whether the event fits,
+  /// and it says nothing about any participant. The interesting pair is
+  /// `heap` against `stableReserved` — file bytes live in stable memory
+  /// (see `Slab`), so a heap that stays flat while stable memory grows is
+  /// the design working.
+  memory: () ->
+   (record {
+      cycles: nat;
+      files: nat;
+      heap: nat;
+      heapClaimed: nat;
+      stableLive: nat;
+      stableReserved: nat;
+    }) query;
+  moderation_log: (after: opt Cursor__1, limit: nat) -> (LogPage) query;
+  moderation_log_for: (handle: text, after: opt Cursor__1, limit: nat) ->
+   (LogPage) query;
+  moderators: (limit: nat) -> (vec PublicUser) query;
+  /// What this caller has spent of their allowance, and what it is.
+  my_allowance: () -> (opt record {
+                             cap: nat;
+                             used: nat;
+                           }) query;
+  my_deposit: () -> (opt Deposit) query;
+  /// Every current seat, so a double qualifier can deliberately choose the
+  /// app a version belongs to. The singular query above stays for old cards.
+  my_entries: () -> (vec Entry) query;
+  my_entry: () -> (opt Entry) query;
+  my_payouts: () -> (vec Payout__1) query;
+  /// What this caller has asked for, and what came back — rejection reports
+  /// included. Their own only: a review is between a hacker and a moderator.
+  my_revisions: (limit: nat) -> (vec Revision) query;
+  /// Where the caller's rewards are held.
+  ///
+  /// The address, not the balance. Reading a balance means calling a ledger,
+  /// and a method that calls whichever ledger the caller names is a way to
+  /// spend this canister's cycles on someone else's errand. The browser can
+  /// query `icrc1_balance_of` itself — it is a public, anonymous query, and
+  /// the account below is all it needs.
+  my_reward_account: () -> (opt Account) query;
+  /// A registered user may only write under `/u/<their id>/`.
+  /// Upload into your own namespace.
+  ///
+  /// What the file is for — and therefore how large it may be — comes from
+  /// the folder it is going into, not from the caller. Declaring it meant the
+  /// avatar and image caps were advisory: anyone wanting a 1.9 MB avatar
+  /// asked for the package limit and got it.
+  /// Role-aware account and whole-store ceilings live in `Assets`; the
+  /// hacker-cap proof in `Profiles` is calculated against those same values.
+  /// Keeping one source prevents a harmless-looking local constant change
+  /// from reopening the global capacity exhaustion bug.
+  my_upload: (cmd: Cmd) -> (Result_11);
+  my_vote_on: (entryId: nat64) -> (bool) query;
+  /// How many of a judge's two votes are left this week.
+  my_votes_left: () -> (nat) query;
+  notices: (limit: nat) -> (vec Notice) query;
+  notices_pending: () -> (nat) query;
+  /// Sweep one named ledger.
+  ///
+  /// Rate-limited from the same window as `notify_deposits`, which it used to
+  /// skip entirely — so the limit was decorative: one call a minute asking
+  /// about all your ledgers, or as many as you liked asking about one. The
+  /// eligibility check runs first so a refusal does not spend the turn.
+  notify_deposit: (ledger: principal) -> (Result_7);
+  /// Collect everything a sponsor has sent, across every ledger they pledged.
+  ///
+  /// Self-service: the sponsor transfers, then says so. Each ledger is swept
+  /// independently and one that fails does not stop the others — a sponsor
+  /// paying in three tokens should not be blocked by one unreachable ledger.
+  notify_deposits: () -> (Result_17);
+  /// Is a distribution still being attempted?
+  payout_armed: () -> (bool) query;
+  payout_plan: (seasonId: nat64) -> (vec Line) query;
+  payout_progress: (seasonId: nat64) -> (Progress) query;
+  pending_judges: (limit: nat) -> (vec PublicUser) query;
+  /// What the treasury holds, per ledger.
+  ///
+  /// A query over our own records, not a round of calls to the ledgers. The
+  /// canister already knows every movement — see `Treasury.pools` — and the
+  /// method this replaces took a ledger id from the caller and called it,
+  /// which let anyone make this canister send messages wherever they liked.
+  prize_pool: () -> (vec record {
+                           principal;
+                           nat;
+                         }) query;
+  profile: (handle: text) -> (opt PublicUser) query;
+  /// Report whether final reconciliation already froze the distribution.
+  ///
+  /// Retained for interface compatibility and moderator diagnostics. Final
+  /// reconciliation exclusively owns the ledger snapshot and plan write;
+  /// this endpoint performs no ledger I/O and can never redraft it.
+  propose_payout: (seasonId: nat64) -> (Result_16);
+  /// Ship a new build, write what changed, or both.
+  ///
+  /// The replaced package is deleted here rather than in `Season`: that
+  /// module owns the row, this one owns the asset store.
+  publish_update: (entryId: nat64, input: UpdateInput) -> (Result_8);
+  recent_users: (limit: nat) -> (vec PublicUser) query;
+  /// End the self-only seal by adding the fixed Neutrinite DAO controller.
+  ///
+  /// No principal or repair instruction comes from the caller. Each current,
+  /// non-anonymised moderator owner contributes at most one persisted vote.
+  /// The third vote invokes the one settings transition installed in
+  /// `Controllers.recover`.
+  recover_canister: () -> (Result_15);
+  register: (input: Input) -> (Result_2);
+  /// Refuse it, with a concise reason the author can act on. Longer machine
+  /// reports can be linked instead of retained in every revision row.
+  reject_revision: (id: nat64, reason: text) -> (Result_8);
+  resolve_notice: (id: nat64, state: State__1) -> (Result_14);
+  review_pending: () -> (nat) query;
+  /// The queue, oldest first. Moderators and their nominated review agents.
+  review_queue: (limit: nat) -> (vec Revision) query;
+  /// Send the approved plan. Resumable: call it again after a failure and it
+  /// picks up whatever is left, re-sending identical arguments.
+  ///
+  /// This is the moderator fallback for a distribution whose timer stopped
+  /// while the canister was frozen. It uses the same lease, cooldown and
+  /// immutable plan as the automatic worker; standing is checked before even
+  /// the bounded progress scan.
+  ///
+  /// Resumption is safe because the plan is not an input. Amounts,
+  /// destinations, fees and the deduplication nonce were all frozen when it
+  /// was drafted; the moderator cannot add a row, change one, or aim one
+  /// somewhere else. Every attempt re-sends byte-identical arguments, so a
+  /// row that already went through comes back `#Duplicate` and settles as
+  /// paid.
+  run_payout: (seasonId: nat64) -> (Result_13);
+  /// Remove every external controller and retain only this canister.
+  ///
+  /// No person, developer identity or DAO can then upgrade the code/frontend
+  /// or change settings. The installed emergency path below can add only the
+  /// fixed Neutrinite DAO after three distinct current moderators approve it.
+  /// Arrange everything first — moderators appointed, frontend uploaded,
+  /// allowance set — because normal operation remains self-controlled.
+  ///
+  /// Requires the canister to be one of its own controllers, which a human
+  /// arranges once by hand: reading your own status is unprivileged, changing
+  /// your own settings is not.
+  seal_canister: () -> (Result_11);
+  season: () -> (opt Season) query;
+  season_by_number: (number: nat) -> (opt Season) query;
+  /// The whole bracket in one call — every week, its top entries and its
+  /// true count. What the season map draws.
+  season_map: (seasonId: nat64, perWeek: nat) -> (vec WeekView) query;
+  season_running: () -> (opt Season) query;
+  /// One week's entries, best first. Ranked by votes, ties to the earliest
+  /// submission.
+  season_week: (seasonId: nat64, week: nat, limit: nat) -> (vec Entry) query;
+  season_week_page: (seasonId: nat64, week: nat, after: opt nat, limit:
+   nat) -> (WeekPage) query;
+  /// The same week, joined with each entry's author and the caller's own
+  /// votes — what the season page actually renders.
+  season_week_view: (seasonId: nat64, week: nat, limit: nat) ->
+   (vec View) query;
+  /// Past and present seasons, newest first — what the season switcher lists.
+  seasons: (limit: nat) -> (vec Season) query;
+  /// Nominate a principal that may drive this account, or stand it down.
+  ///
+  /// For scripting a weekly build. Deliberately the account holder's call
+  /// and not the agent's — an agent that could appoint the next agent could
+  /// keep the account after being dismissed.
+  set_agent: (agent: opt principal) -> (Result_2);
+  set_avatar: (key: opt text) -> (Result_2);
+  set_config: (siteTitle: text, registrationOpen: bool) -> (Result_11);
+  /// Roles stack. Hacking is self-service; judging and sponsoring are
+  /// applications a moderator approves. Holding none of them is what makes
+  /// somebody an observer — the default on registration.
+  set_hacker: (on: bool) -> (Result_2);
+  /// The instruction allowance one account gets per season. Controller-only.
+  set_instruction_cap: (cap: nat) -> (Result_11);
+  /// Approve, reject, reset or revoke a judge. The target binds the decision
+  /// to the exact account and role snapshot the moderator reviewed.
+  ///   variant { approved } | variant { pending } | variant { no }
+  /// Every successful state change enters the subject's bounded audit trail,
+  /// so a mistake is reversible and traceable rather than silent.
+  set_judge: (target: JudgeTarget, status: JudgeStatus, note: opt text) ->
+   (Result_10);
+  /// Configure the only remote ledger actors this sealed canister will ever
+  /// call. The list is controller-owned setup state and freezes as soon as a
+  /// sponsor application exists (and, independently, once a season starts).
+  set_ledger_allowlist: (ledgers: vec principal) -> (Result_12);
+  /// Appointing moderators stays with the controller. Moderators appointing
+  /// moderators has no floor.
+  set_moderator: (target: ModeratorTarget, on: bool, note: opt text) ->
+   (Result_10);
+  set_next_season_url: (url: text) -> (Result_11);
+  /// Stand out of the prize money. What you would have had is shared among
+  /// everybody else rather than staying in the treasury.
+  set_reward_opt_out: (out: bool) -> (Result_2);
+  /// Approve, reject, reset or revoke a sponsorship against the exact
+  /// application snapshot shown to the moderator.
+  ///   variant { approved } | variant { pending } | variant { no }
+  set_sponsor: (target: SponsorTarget, status: SponsorStatus, note:
+   opt text) -> (Result_10);
+  /// Where this account's rewards should be sent.
+  ///
+  /// Not the identity you signed in with — that is a per-origin pseudonym,
+  /// not a ledger account, and tokens sent to it are gone. Make a wallet at
+  /// https://nns.ic0.app/ and give it that principal.
+  set_wallet: (wallet: principal) -> (Result_2);
+  /// Start the season. Freezes the judges and starts the clock, and from here
+  /// nobody has to press anything again.
+  ///
+  /// **Moderators, and only once the canister is sealed.** Sealed means the
+  /// canister itself is its sole controller: no external principal holds
+  /// upgrade or settings authority, and ingress cannot impersonate the
+  /// canister principal. The authority that survives sealing is therefore
+  /// only what this installed code grants.
+  ///
+  /// The seal is checked rather than assumed, on every start. A season that
+  /// began while somebody still held the keys would be a season whose rules
+  /// could be rewritten halfway through, which is the one thing the whole
+  /// arrangement exists to rule out — and it would look identical from
+  /// outside to one that could not.
+  start_season: (seasonId: nat64) -> (Result_9);
+  /// Index-backed totals; cheap enough to poll.
+  stats: () -> (Counts) query;
+  /// Submit or replace this week's entry. Hackers only.
+  submit_entry: (input: EntryInput) -> (Result_8);
+  /// Move an approved sponsor's balance into the treasury. One way.
+  sweep_sponsor: (handle: text, ledger: principal) -> (Result_7);
+  /// Take an app's content down. **Two moderators, and it deletes files.**
+  ///
+  /// For content that must stop being served: an infringing build, art
+  /// somebody else owns, anything unlawful. It removes the package and the
+  /// images and says so on the entry — and it leaves the entry, its author
+  /// and its votes exactly where they were.
+  ///
+  /// That last part is deliberate. Judges have already seen and scored what
+  /// was there; deleting the row would rewrite a week's arithmetic to cover
+  /// for a moderation decision. The entry stands with a notice on it, and the
+  /// judges decide what an app with nothing to install is worth.
+  ///
+  /// Two moderators because it destroys files that cannot be recovered.
+  /// The first call records a vote and answers `#NeedsSecond`.
+  takedown_app: (entryId: nat64, reason: text) -> (Result_6);
+  /// How many moderators have backed taking this app down, and how many it needs.
+  takedown_tally: (entryId: nat64, reason: opt text) -> (opt Backing) query;
+  terms_info: () -> (record {
+                       effectiveAt: nat64;
+                       version: nat;
+                     }) query;
+  /// Let a frozen account write again, and optionally clear its spend.
+  ///
+  /// There is no companion that freezes. Freezing is what the meter does
+  /// when an account crosses its allowance — see `Meter.thaw` for why
+  /// moderators get one half of that and not the other.
+  thaw_user: (handle: text, reset: bool) -> (Result_5);
+  /// The ledgers any approved sponsor pledged — what the treasury may hold.
+  treasury_ledgers: () -> (vec principal) query;
+  update_profile: (input: Input) -> (Result_2);
+  /// Everything one person has entered, across every season. Public: a
+  /// profile shows what somebody built whether or not you are them.
+  user_entries: (handle: text, limit: nat) -> (vec Summary) query;
+  /// Raw account rows contain principals, wallet/agent assignments, terms
+  /// acceptance and metering state. Only moderators may inspect them.
+  users_admin_page: (filter: Filter, letter: opt Letter, after: opt Cursor,
+   limit: nat) -> (Page) query;
+  /// One page of users, always alphabetical by handle.
+  ///
+  /// `letter` restricts to one A-Z bucket ("#" for handles starting with a
+  /// digit or underscore) and seeks straight to it — nothing before it is
+  /// read. `after` is the previous page's `next`; `null` starts at the top.
+  ///
+  /// Everyone is a participant, so `#all` includes judges and moderators.
+  users_page: (filter: Filter, letter: opt Letter, after: opt Cursor, limit:
+   nat) -> (PublicPage) query;
+  /// Handle prefix search, scoped by the same filters.
+  users_search: (prefix: text, filter: Filter, limit: nat) ->
+   (vec PublicUser) query;
+  /// Recover a vanished lifecycle timer after cycles are restored.
+  ///
+  /// This is deliberately not an override. The caller supplies no target or
+  /// timing data. An early call only replaces the one-shot timer at the exact
+  /// stored deadline; a due call enters the same guarded phase function as
+  /// that timer. Funding and payout retain their leases and retry cadence.
+  wake_automation: () -> (Result_4);
+  /// When the open week is due to end, if a season is running.
+  week_ends_at: () -> (opt nat64) query;
+  whoami: () -> (principal) query;
+  /// Move your own rewards out. **The account holder only, never an agent.**
+  ///
+  /// The source subaccount is derived from `caller` and is not a parameter,
+  /// so there is no input to this method that can name the treasury or
+  /// somebody else's rewards. The destination *is* a parameter, which is why
+  /// this resolves with `Profiles.owner`: an agent is trusted to drive the
+  /// account, not to empty it.
+  withdraw: (ledger: principal, to: Account) -> (Result_3);
+  withdraw_sponsor: () -> (Result_2);
+  /// Withdraw only the caller's own still-pending takedown vote.
+  withdraw_takedown: (entryId: nat64) -> (Result_1);
+  withdraw_vote: (entryId: nat64) -> (Result);
+  withdrawals_locked: () -> (bool) query;
+}

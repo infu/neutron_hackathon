@@ -1,0 +1,46 @@
+{
+  "canisters": [
+    {
+      "name": "profiles_tests",
+      "src": "profiles.test.mo"
+    },
+    {
+      "name": "assets_tests",
+      "src": "assets.test.mo"
+    },
+    {
+      "name": "moderation_tests",
+      "src": "moderation.test.mo"
+    },
+    {
+      "name": "paging_tests",
+      "src": "paging.test.mo"
+    },
+    {
+      "name": "role_tests",
+      "src": "roles.test.mo"
+    },
+    {
+      "name": "season_tests",
+      "src": "season.test.mo"
+    },
+    {
+      "name": "treasury_tests",
+      "src": "treasury.test.mo"
+    },
+    {
+      "name": "roleplay_tests",
+      "src": "roleplay.test.mo"
+    },
+    {
+      "name": "slab_tests",
+      "src": "slab.test.mo"
+    }
+  ],
+  "mo": {
+    "core": "../.mops/core@1.0.0/src",
+    "base": "../.mops/base@0.14.14/src",
+    "sha2": "../.mops/sha2@0.1.6/src",
+    "ashroot": "../vendor/ashroot/src"
+  }
+}

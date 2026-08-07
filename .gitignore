@@ -1,0 +1,27 @@
+# Motoko / IC
+.mops/
+.ash/
+.build/
+.icp/
+.env
+ashroot.archive/
+local-ledgers.json
+backend/ashroot.json
+
+# Node
+node_modules/
+frontend/dist/
+
+# Generated Candid bindings are committed; ignore any extra generator outputs.
+frontend/src/declarations/*
+!frontend/src/declarations/hackathon.did
+!frontend/src/declarations/hackathon.js
+!frontend/src/declarations/hackathon.d.ts
+
+# Editors / OS
+.DS_Store
+*.swp
+
+# assetgen scratch. The generated art under assets/generated/ IS committed —
+# it is the source for frontend/public/, and regenerating costs provider calls.
+.assetgen/

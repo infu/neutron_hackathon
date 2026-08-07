@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "meridian.png",
+  "type": "image",
+  "kind": "icon",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-1.5",
+  "createdAt": "2026-08-01T16:36:22.005Z",
+  "prompt": "A minimal geometric corporate logo mark: a globe reduced to a single bold circle crossed by one vertical meridian arc and two horizontal latitude lines, with a small solid dot where the meridian meets the upper latitude. Flat vector style, solid teal-cyan, uniform stroke weight, precise geometry, no container shape, no badge, no filled circle behind it. Transparent background, tight optical bounds, centred. Absolutely no text, no letters, no numbers, no wordmark.",
+  "promptHash": "sha256:7baf40aa94b8609cbe0596cb8d137d3cd0246d572450c2a24967e98dc74bc9a4",
+  "operationHash": "sha256:735d07d4dd2537546b0b478a05655684db696c6f7047c9b9f650335f2837ea98",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A minimal geometric corporate logo mark: a globe reduced to a single bold circle crossed by one vertical meridian arc and two horizontal latitude lines, with a small solid dot where the meridian meets the upper latitude. Flat vector style, solid teal-cyan, uniform stroke weight, precise geometry, no container shape, no badge, no filled circle behind it. Transparent background, tight optical bounds, centred. Absolutely no text, no letters, no numbers, no wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      512,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": true,
+    "out": "assets/generated/frontend/public/logos/meridian.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/8364340939f7ff57.png",
+    "final": "assets/generated/frontend/public/logos/meridian.png",
+    "width": 512,
+    "height": 512,
+    "format": "png",
+    "hasAlpha": true,
+    "sha256": "sha256:1f386a0944f29d704b68d60f5d74b96bebf8318de615ba5446dbc8d901580745"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": false,
+    "checks": {
+      "exact-size": true,
+      "alpha-required": true,
+      "alpha-nonempty": true,
+      "bounds": false
+    }
+  },
+  "export": true
+}

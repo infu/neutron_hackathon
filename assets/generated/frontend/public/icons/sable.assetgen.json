@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "sable.png",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T16:40:38.980Z",
+  "prompt": "A modern app icon: a rounded-square tile with a deep violet to indigo flat fill, containing one bold centred white glyph of a closed padlock whose shackle is formed from a simple document corner fold. Flat vector style, no gradients beyond the subtle two-tone fill, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+  "promptHash": "sha256:057485633832a5190c03749a604fb486cbf742201385933aa814c5f852837aa4",
+  "operationHash": "sha256:7197ed9b23152b94e0609f130af38226a975041bde289117bae9398c6888f90c",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A modern app icon: a rounded-square tile with a deep violet to indigo flat fill, containing one bold centred white glyph of a closed padlock whose shackle is formed from a simple document corner fold. Flat vector style, no gradients beyond the subtle two-tone fill, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      256,
+      256
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/icons/sable.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/1f25f8fb20a968fa.png",
+    "final": "assets/generated/frontend/public/icons/sable.png",
+    "width": 256,
+    "height": 256,
+    "format": "png",
+    "hasAlpha": false,
+    "sha256": "sha256:37b4ea3b2f8f439ebb4abadd2689b3dad78eb2a2d249cc074e4e3f458c6be67b"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

@@ -1,0 +1,7 @@
+[package]
+name = "ashroot"
+version = "0.1.0"
+description = "Ashroot is a Motoko Database"
+
+[dependencies]
+core = "1.0.0"

@@ -1,0 +1,366 @@
+# Mockup art for the Hackathon demo content.
+#
+# Everything lands in frontend/public/, so the existing deploy pipeline bundles
+# it into dist and syncs it to the canister as a certified asset — no separate
+# upload step, and the database only ever stores the path string.
+#
+#   assetgen batch assetgen.assets.yaml --dry-run    # check before spending
+#   assetgen batch assetgen.assets.yaml
+#
+# The one trick worth knowing: every prompt demands text be drawn as grey
+# placeholder bars. Image models garble real lettering, and garbled words are
+# the single clearest tell that a screenshot is fake. Bars read as "UI" at
+# thumbnail size and stay honest at full size.
+
+version: 1
+project: neutron-hackathon
+
+defaults:
+  type: image
+  mode: generate
+  provider: openai
+  quality: high
+
+assets:
+  # ── Demo app screenshots ────────────────────────────────────────────────
+  # The four seeded entries. 3:2, matching the entry card thumbnail.
+
+  - id: shot-sable
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/sable.webp
+    prompt: >-
+      A clean, modern desktop app screenshot for an encrypted note-taking tool.
+      Flat straight-on view of the app interface only — no browser chrome, no
+      window title bar, no device frame, no desktop background, no cursor.
+      Layout: a narrow left sidebar listing note entries, and a wide main pane
+      showing a single note. A small closed-padlock glyph and a subtle violet
+      status pill sit in the top right of the main pane.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D, no
+      photographic elements. Single electric violet accent colour used sparingly.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  - id: shot-rewind
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/rewind.webp
+    prompt: >-
+      A clean, modern desktop app screenshot for a time-travel debugging tool.
+      Flat straight-on view of the app interface only — no browser chrome, no
+      window title bar, no device frame, no desktop background, no cursor.
+      Layout: a horizontal timeline scrubber across the top with evenly spaced
+      tick marks and one highlighted playhead marker; below it a two-column
+      split showing a vertical list of recorded message rows on the left and a
+      detail inspector panel on the right. Small transport controls near the
+      timeline.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D, no
+      photographic elements. Single electric teal-cyan accent colour used
+      sparingly.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  - id: shot-tilecast
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/tilecast.webp
+    prompt: >-
+      A clean, modern desktop app screenshot for a tool that shares state
+      between isolated application tiles. Flat straight-on view of the
+      interface only — no browser chrome, no window title bar, no device frame,
+      no desktop background, no cursor.
+      Layout: a dashboard grid of four to six rectangular tile panels of
+      differing sizes, with thin electric blue connector lines drawn between
+      three of them to suggest data flowing across tiles. Each tile holds a
+      small abstract chart or list.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D, no
+      photographic elements. Single electric blue accent colour used sparingly.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  - id: shot-lantern
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/lantern.webp
+    prompt: >-
+      A clean, modern desktop app screenshot for a design-system component
+      library. Flat straight-on view of the interface only — no browser chrome,
+      no window title bar, no device frame, no desktop background, no cursor.
+      Layout: a component gallery — a grid of white cards each previewing one
+      abstract UI component: a button, a toggle switch, a slider, a small
+      avatar row, a progress bar, a segmented control. A narrow left sidebar
+      lists categories. One amber accent swatch row sits near the top.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D, no
+      photographic elements. Single warm amber accent colour used sparingly.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  # ── Sponsor logos ───────────────────────────────────────────────────────
+  # Symbol marks only. The organisation name is already rendered as HTML text
+  # beside the mark, and a generated wordmark would come out garbled.
+
+  - id: logo-helix
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [512, 512]
+    transparent: true
+    format: png
+    output: frontend/public/logos/helix.png
+    prompt: >-
+      A minimal geometric corporate logo mark: a double-helix formed from two
+      interlocking ribbons of stacked square dots spiralling around a shared
+      vertical axis. Flat vector style, solid electric blue, precise even
+      geometry, no outline, no container shape, no badge, no circle behind it.
+      Transparent background, tight optical bounds, centred.
+      Absolutely no text, no letters, no numbers, no wordmark.
+
+  - id: logo-meridian
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [512, 512]
+    transparent: true
+    format: png
+    output: frontend/public/logos/meridian.png
+    prompt: >-
+      A minimal geometric corporate logo mark: a globe reduced to a single bold
+      circle crossed by one vertical meridian arc and two horizontal latitude
+      lines, with a small solid dot where the meridian meets the upper
+      latitude. Flat vector style, solid teal-cyan, uniform stroke weight,
+      precise geometry, no container shape, no badge, no filled circle behind
+      it. Transparent background, tight optical bounds, centred.
+      Absolutely no text, no letters, no numbers, no wordmark.
+
+  - id: logo-northgate
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [512, 512]
+    transparent: true
+    format: png
+    output: frontend/public/logos/northgate.png
+    prompt: >-
+      A minimal geometric corporate logo mark: an upward-pointing chevron
+      shaped like a stylised gate arch, built from three nested angular strokes
+      of decreasing size. Flat vector style, solid deep green, uniform stroke
+      weight, precise symmetric geometry, no container shape, no badge, no
+      circle behind it. Transparent background, tight optical bounds, centred.
+      Absolutely no text, no letters, no numbers, no wordmark.
+
+  # ── App icons ───────────────────────────────────────────────────────────
+  # The season map renders every entry as a small icon tile, so these have to
+  # survive being drawn at ~56px. Bold single glyph, no fine detail, no text.
+
+  - id: icon-sable
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [256, 256]
+    format: png
+    output: frontend/public/icons/sable.png
+    prompt: >-
+      A modern app icon: a rounded-square tile with a deep violet to indigo
+      flat fill, containing one bold centred white glyph of a closed padlock
+      whose shackle is formed from a simple document corner fold. Flat vector
+      style, no gradients beyond the subtle two-tone fill, no bevel, no
+      shadow, no border. The glyph is thick and simple enough to read clearly
+      at 56 pixels. Absolutely no text, letters, numbers, or wordmark.
+
+  - id: icon-rewind
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [256, 256]
+    format: png
+    output: frontend/public/icons/rewind.png
+    prompt: >-
+      A modern app icon: a rounded-square tile with a flat teal-cyan fill,
+      containing one bold centred white glyph of a rewind symbol — two
+      left-pointing triangles — sitting on a short horizontal timeline bar with
+      three tick marks. Flat vector style, no gradients, no bevel, no shadow,
+      no border. The glyph is thick and simple enough to read clearly at 56
+      pixels. Absolutely no text, letters, numbers, or wordmark.
+
+  - id: icon-tilecast
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [256, 256]
+    format: png
+    output: frontend/public/icons/tilecast.png
+    prompt: >-
+      A modern app icon: a rounded-square tile with a flat electric blue fill,
+      containing one bold centred white glyph of four small squares arranged in
+      a two-by-two grid, with two of them joined by a thick connecting line.
+      Flat vector style, no gradients, no bevel, no shadow, no border. The
+      glyph is thick and simple enough to read clearly at 56 pixels.
+      Absolutely no text, letters, numbers, or wordmark.
+
+  - id: icon-lantern
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [256, 256]
+    format: png
+    output: frontend/public/icons/lantern.png
+    prompt: >-
+      A modern app icon: a rounded-square tile with a flat warm amber fill,
+      containing one bold centred white glyph of a simple geometric lantern —
+      a trapezoid body with a small ring handle on top and a solid square of
+      light in its centre. Flat vector style, no gradients, no bevel, no
+      shadow, no border. The glyph is thick and simple enough to read clearly
+      at 56 pixels. Absolutely no text, letters, numbers, or wordmark.
+
+  - id: shot-prism
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/prism.webp
+    prompt: >-
+      A clean, modern desktop app screenshot for a capability inspector — a
+      tool showing exactly what an application is permitted to reach. Flat
+      straight-on view of the interface only — no browser chrome, no window
+      title bar, no device frame, no desktop background, no cursor.
+      Layout: a left tree of nested permission groups with small expand
+      chevrons and toggle pills, and a wide right pane showing a permission
+      matrix — a grid of rows against columns with small filled and hollow
+      status dots marking granted and denied.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D, no
+      photographic elements. Single deep green accent colour used sparingly.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  - id: icon-prism
+    type: image
+    mode: generate
+    kind: icon
+    size: [1024, 1024]
+    finalSize: [256, 256]
+    format: png
+    output: frontend/public/icons/prism.png
+    prompt: >-
+      A modern app icon: a rounded-square tile with a flat deep green fill,
+      containing one bold centred white glyph of a triangular prism splitting a
+      single incoming beam into three diverging rays. Flat vector style, no
+      gradients, no bevel, no shadow, no border. The glyph is thick and simple
+      enough to read clearly at 56 pixels. Absolutely no text, letters,
+      numbers, or wordmark.
+
+  # ── Extra screenshots ───────────────────────────────────────────────────
+  # A second and third view for two of the apps, so the modal carousel has
+  # something real to page through rather than the same image repeated.
+
+  - id: shot-sable-2
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/sable-2.webp
+    prompt: >-
+      A clean, modern desktop app screenshot: the settings pane of an encrypted
+      note-taking tool. Flat straight-on view of the interface only — no
+      browser chrome, no window title bar, no device frame, no cursor.
+      Layout: a narrow left sidebar of setting categories, and a main pane of
+      stacked setting rows, each a label on the left and a toggle switch or
+      small dropdown on the right. Three toggles are on, in violet. A boxed
+      panel near the bottom holds a row of small key-shaped glyphs.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  - id: shot-sable-3
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/sable-3.webp
+    prompt: >-
+      A clean, modern desktop app screenshot: the sharing dialog of an
+      encrypted note-taking tool, shown over a dimmed page. Flat straight-on
+      view of the interface only — no browser chrome, no window title bar, no
+      device frame, no cursor.
+      Layout: a centred white dialog card holding a list of four recipient rows
+      — each a small circular avatar placeholder, two grey text bars, and a
+      permission pill on the right — with a violet primary button and a plain
+      secondary button at the bottom. A closed-padlock glyph sits top right of
+      the dialog.
+      Visual style: near-white cool grey background, pure white dialog,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no 3D.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.
+
+  - id: shot-rewind-2
+    type: image
+    mode: generate
+    kind: hero-still
+    size: [1536, 1024]
+    finalSize: [768, 512]
+    format: webp
+    output: frontend/public/shots/rewind-2.webp
+    prompt: >-
+      A clean, modern desktop app screenshot: the diff view of a time-travel
+      debugging tool. Flat straight-on view of the interface only — no browser
+      chrome, no window title bar, no device frame, no cursor.
+      Layout: two side-by-side code panes separated by a thin divider, each a
+      column of indented grey placeholder bars with small line-number marks in
+      the left gutter. Four rows are tinted pale red on the left pane and four
+      tinted pale teal on the right. A compact toolbar of segmented buttons
+      sits above them.
+      Visual style: near-white cool grey page background, pure white panels,
+      hairline light grey borders, 4px corner radius, generous whitespace,
+      completely flat with no gradients, no glow, no shadows, no 3D.
+      Single electric teal-cyan accent used sparingly.
+      CRITICAL: render every piece of text as soft light-grey rounded
+      placeholder bars of varying widths. Absolutely no legible letters, words,
+      numbers, or logos anywhere in the image.

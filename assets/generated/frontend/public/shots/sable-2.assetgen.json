@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "sable-2.webp",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T23:36:58.805Z",
+  "prompt": "A clean, modern desktop app screenshot: the settings pane of an encrypted note-taking tool. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no cursor. Layout: a narrow left sidebar of setting categories, and a main pane of stacked setting rows, each a label on the left and a toggle switch or small dropdown on the right. Three toggles are on, in violet. A boxed panel near the bottom holds a row of small key-shaped glyphs. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+  "promptHash": "sha256:a8a5478942977233a7f06f823c9c5bb5024257f4804bd502b97c2690ef2a2abb",
+  "operationHash": "sha256:cb91e1345447af85e4827e12a675d831be0916e5b0af23629d063349e47c81d0",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A clean, modern desktop app screenshot: the settings pane of an encrypted note-taking tool. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no cursor. Layout: a narrow left sidebar of setting categories, and a main pane of stacked setting rows, each a label on the left and a toggle switch or small dropdown on the right. Three toggles are on, in violet. A boxed panel near the bottom holds a row of small key-shaped glyphs. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      768,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "webp",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/shots/sable-2.webp",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/b04cacf24a0636fd.webp",
+    "final": "assets/generated/frontend/public/shots/sable-2.webp",
+    "width": 768,
+    "height": 512,
+    "format": "webp",
+    "hasAlpha": false,
+    "sha256": "sha256:1c98f753902cddde79d995ca2d77eda6c0609d1396909c95ea6bfcf2ad35faf8"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

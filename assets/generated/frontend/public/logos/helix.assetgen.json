@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "helix.png",
+  "type": "image",
+  "kind": "icon",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-1.5",
+  "createdAt": "2026-08-01T16:35:52.413Z",
+  "prompt": "A minimal geometric corporate logo mark: a double-helix formed from two interlocking ribbons of stacked square dots spiralling around a shared vertical axis. Flat vector style, solid electric blue, precise even geometry, no outline, no container shape, no badge, no circle behind it. Transparent background, tight optical bounds, centred. Absolutely no text, no letters, no numbers, no wordmark.",
+  "promptHash": "sha256:67c51c33beed690a967741b50d714f2f831f0351030da69054ef133ae8ac4a5d",
+  "operationHash": "sha256:afa36e18c35b66cf9d16ae6a2367eb2e1c971db90054d5cc13007b5a301522f2",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A minimal geometric corporate logo mark: a double-helix formed from two interlocking ribbons of stacked square dots spiralling around a shared vertical axis. Flat vector style, solid electric blue, precise even geometry, no outline, no container shape, no badge, no circle behind it. Transparent background, tight optical bounds, centred. Absolutely no text, no letters, no numbers, no wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      512,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": true,
+    "out": "assets/generated/frontend/public/logos/helix.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/a9d72b44080695a1.png",
+    "final": "assets/generated/frontend/public/logos/helix.png",
+    "width": 512,
+    "height": 512,
+    "format": "png",
+    "hasAlpha": true,
+    "sha256": "sha256:b4c90c8cf7fda2541cad13d0ec403fc92a909247b2326279357c33cc379a4f5b"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": false,
+    "checks": {
+      "exact-size": true,
+      "alpha-required": true,
+      "alpha-nonempty": true,
+      "bounds": false
+    }
+  },
+  "export": true
+}

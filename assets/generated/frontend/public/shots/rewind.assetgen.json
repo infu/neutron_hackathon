@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "rewind.webp",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T16:31:47.791Z",
+  "prompt": "A clean, modern desktop app screenshot for a time-travel debugging tool. Flat straight-on view of the app interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a horizontal timeline scrubber across the top with evenly spaced tick marks and one highlighted playhead marker; below it a two-column split showing a vertical list of recorded message rows on the left and a detail inspector panel on the right. Small transport controls near the timeline. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single electric teal-cyan accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+  "promptHash": "sha256:5c6fff7e7aa43e8fec536986f520a955f03f3d56d07874b0d9502f007d4dd136",
+  "operationHash": "sha256:3c51a209fe3e01cf59ca5380392aae2781005cfe774be77655998dcb840c2512",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A clean, modern desktop app screenshot for a time-travel debugging tool. Flat straight-on view of the app interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a horizontal timeline scrubber across the top with evenly spaced tick marks and one highlighted playhead marker; below it a two-column split showing a vertical list of recorded message rows on the left and a detail inspector panel on the right. Small transport controls near the timeline. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single electric teal-cyan accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      768,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "webp",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/shots/rewind.webp",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/8efb2ecbcd2e7754.webp",
+    "final": "assets/generated/frontend/public/shots/rewind.webp",
+    "width": 768,
+    "height": 512,
+    "format": "webp",
+    "hasAlpha": false,
+    "sha256": "sha256:bd26aac63f4031795cfa314516ff878213fbde7584746359367b1592ff4a3b98"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

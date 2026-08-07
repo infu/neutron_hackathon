@@ -1,0 +1,89 @@
+canisters:
+  - name: hackathon
+    # These settings become sealed when seal_canister() removes every external
+    # controller and leaves the canister itself in control. Keep allocation
+    # dynamic and best-effort, preserve a one-week top-up runway, and leave
+    # enough reservation headroom for the bounded stable store even if its
+    # subnet later becomes crowded. The reservation limit is only a cap;
+    # setting it does not reserve or spend cycles.
+    settings:
+      compute_allocation: 0
+      memory_allocation: 0
+      freezing_threshold: 7d
+      reserved_cycles_limit: 10000t
+      wasm_memory_limit: 3gib
+      wasm_memory_threshold: 0
+    build:
+      steps:
+        # Build with the pinned public moc toolchain. The wrapper resolves Mops
+        # package paths without shell interpolation and emits deterministic gzip.
+        - type: script
+          commands:
+            - node scripts/bindings.mjs --check
+            # `--max-stable-pages` gates region growth, not just the old
+            # ExperimentalStableMemory API, and it defaults to 65536 pages =
+            # 4 GiB. File bytes live in three independent, non-shrinking slab
+            # regions (backend/lib/Slab.mo). Their adversarial cross-class
+            # high-water total is ~64.50 GiB before frontend headroom.
+            # 1,310,720 pages = 80 GiB; participant admission stops at the lower
+            # ~65.50 GiB policy ceiling before the compiler can refuse growth.
+            - node scripts/build-backend.mjs --output "$ICP_WASM_OUTPUT_PATH" --replace-with-gzip
+            # `install_code` sent as ingress caps the whole
+            # request at 2 MiB and this module is past that raw, so an
+            # uncompressed deploy is refused outright with
+            # `BadIngressMessage: Request ... is too large`. The replica sniffs
+            # the gzip magic bytes and inflates the module itself, so a
+            # compressed module is a documented input, not a trick. 2.1 MB
+            # becomes about 0.56 MB, which leaves room to keep growing.
+    sync:
+      # Runs after install on every `icp deploy`. Sync steps get ICP_CLI_CID
+      # and ICP_CLI_CID_<NAME> for every canister in the environment, which is
+      # how the frontend build learns the ids it has to talk to.
+      steps:
+        - type: script
+          commands:
+            - node scripts/write-env.mjs
+            - npm run build:web
+            # Rolling publication uploads dependencies first, switches the
+            # entrypoint last, and prunes only inventoried non-/u/ site keys.
+            # Marks the ordered write-env -> build handoff. The uploader still
+            # verifies the mainnet bundle, target id and hardened identity.
+            - node scripts/upload.mjs --prepared
+            # A deploy is not successful until both the full inventory hash
+            # and certified gateway responses match the checkout.
+            - node scripts/verify-web.mjs -e "$ICP_CLI_ENVIRONMENT" --canister-id "$ICP_CLI_CID"
+
+  # Local login UI. Pinned deliberately: Internet Identity releases after
+  # roughly early 2026 split into separate backend and frontend canisters, and
+  # `internet_identity_dev.wasm.gz` stopped carrying the frontend assets — it
+  # answers "Asset / not found", which the gateway surfaces as a 503. This is
+  # the last release that still ships a single self-contained dev wasm.
+  # Not deployed to `ic`; mainnet uses the real https://id.ai.
+  - name: internet_identity
+    build:
+      steps:
+        - type: pre-built
+          url: https://github.com/dfinity/internet-identity/releases/download/release-2025-01-24/internet_identity_dev.wasm.gz
+          sha256: 16722a511d448cb53a074960a277bdcedf533f2c27f333e4ac3fa105b62a5030
+    init_args: "(null)"
+
+networks:
+  - name: local
+    mode: managed
+    # PocketIC's built-in II feature only provides the delegation *backend* at
+    # rdmx6-jaaaa-aaaaa-aaadq-cai, with no browsable UI, so it does not help a
+    # human log in. We deploy our own II canister above instead.
+    ii: false
+    gateway:
+      # icp-cli defaults to 8000, but Neutron's own local network already uses
+      # that port on shared machines. 8943 keeps the two coexisting.
+      bind: 127.0.0.1
+      port: 8943
+
+environments:
+  - name: local
+    network: local
+    canisters: [hackathon, internet_identity]
+  - name: ic
+    network: ic
+    canisters: [hackathon]

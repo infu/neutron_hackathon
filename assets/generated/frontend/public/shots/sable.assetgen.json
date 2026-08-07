@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "sable.webp",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T16:29:57.193Z",
+  "prompt": "A clean, modern desktop app screenshot for an encrypted note-taking tool. Flat straight-on view of the app interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a narrow left sidebar listing note entries, and a wide main pane showing a single note. A small closed-padlock glyph and a subtle violet status pill sit in the top right of the main pane. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single electric violet accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+  "promptHash": "sha256:ecc23ea2167801765fccef973510ec56ada33dc22ff12f5dd917e8b6dcf5c352",
+  "operationHash": "sha256:75354289f32eb2f7bde22ec170b93c8e8156ce9593927243bce7ce4d45a24d5b",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A clean, modern desktop app screenshot for an encrypted note-taking tool. Flat straight-on view of the app interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a narrow left sidebar listing note entries, and a wide main pane showing a single note. A small closed-padlock glyph and a subtle violet status pill sit in the top right of the main pane. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single electric violet accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      768,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "webp",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/shots/sable.webp",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/4e01a7e8ee15a662.webp",
+    "final": "assets/generated/frontend/public/shots/sable.webp",
+    "width": 768,
+    "height": 512,
+    "format": "webp",
+    "hasAlpha": false,
+    "sha256": "sha256:d41a57587dad09e5a14ab3738336746c37152197b5b8201d39d75c0611597444"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

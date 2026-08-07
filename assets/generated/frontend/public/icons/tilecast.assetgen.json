@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "tilecast.png",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T16:44:47.790Z",
+  "prompt": "A modern app icon: a rounded-square tile with a flat electric blue fill, containing one bold centred white glyph of four small squares arranged in a two-by-two grid, with two of them joined by a thick connecting line. Flat vector style, no gradients, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+  "promptHash": "sha256:ed9ba98d6e67c8753c239b329fcb135869162fb465c07229c0a468622a9888ca",
+  "operationHash": "sha256:6f552c5177fa2c429741ad2610090d7c7f4cf06417e5371d62749c49a96628ef",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A modern app icon: a rounded-square tile with a flat electric blue fill, containing one bold centred white glyph of four small squares arranged in a two-by-two grid, with two of them joined by a thick connecting line. Flat vector style, no gradients, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      256,
+      256
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/icons/tilecast.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/ddcfdca4cf5721fd.png",
+    "final": "assets/generated/frontend/public/icons/tilecast.png",
+    "width": 256,
+    "height": 256,
+    "format": "png",
+    "hasAlpha": false,
+    "sha256": "sha256:ea2e80d7ae1fbb01ff9c623976d6a697a1a778df93469f5f0dac7e82f81cc23a"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

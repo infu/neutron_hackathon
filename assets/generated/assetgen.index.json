@@ -1,0 +1,656 @@
+{
+  "version": 1,
+  "assetgenVersion": "0.1.0",
+  "generatedAt": "2026-08-01T23:40:00.297Z",
+  "assets": [
+    {
+      "id": "helix.png",
+      "type": "image",
+      "kind": "icon",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-1.5",
+      "path": "assets/generated/frontend/public/logos/helix.png",
+      "metadataPath": "assets/generated/frontend/public/logos/helix.assetgen.json",
+      "operationHash": "sha256:afa36e18c35b66cf9d16ae6a2367eb2e1c971db90054d5cc13007b5a301522f2",
+      "promptHash": "sha256:67c51c33beed690a967741b50d714f2f831f0351030da69054ef133ae8ac4a5d",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "sha256": "sha256:b4c90c8cf7fda2541cad13d0ec403fc92a909247b2326279357c33cc379a4f5b",
+      "raw": ".assetgen/raw/a9d72b44080695a1.png",
+      "references": [],
+      "quality": {
+        "passed": false,
+        "checks": {
+          "exact-size": true,
+          "alpha-required": true,
+          "alpha-nonempty": true,
+          "bounds": false
+        }
+      },
+      "export": true,
+      "usage": "img",
+      "usageHints": {
+        "primary": "img",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/logos/helix.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "512px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "lantern.png",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/icons/lantern.png",
+      "metadataPath": "assets/generated/frontend/public/icons/lantern.assetgen.json",
+      "operationHash": "sha256:182812afd9562ba9ff74aeb0060d841a60bbcaf5a3133bff58b4da9964ca9420",
+      "promptHash": "sha256:f279c6929eba775df9e9b567dc676bb6536f893b828e94c302e02da1f6241000",
+      "width": 256,
+      "height": 256,
+      "format": "png",
+      "hasAlpha": false,
+      "sha256": "sha256:e3dcc85bf8fbefa5a309f4d02c601f4fde42457eff1b6d5b50521450eecd11f9",
+      "raw": ".assetgen/raw/28bf7b6c9f38e8b7.png",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/icons/lantern.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "256px",
+          "height": "256px"
+        }
+      }
+    },
+    {
+      "id": "lantern.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/lantern.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/lantern.assetgen.json",
+      "operationHash": "sha256:f7cba1fea73f1a300038805e5c1a673db6e23e7f3881853e59e9804647f53a90",
+      "promptHash": "sha256:6f75b063e82e6d64392c14f2cda32c7409f021180e86612781abb89188b251ab",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:7915289d241e832cf6ddc692130150c2c08453c9b528374893608924daaf02c2",
+      "raw": ".assetgen/raw/c02f326d23991f9b.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/lantern.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "meridian.png",
+      "type": "image",
+      "kind": "icon",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-1.5",
+      "path": "assets/generated/frontend/public/logos/meridian.png",
+      "metadataPath": "assets/generated/frontend/public/logos/meridian.assetgen.json",
+      "operationHash": "sha256:735d07d4dd2537546b0b478a05655684db696c6f7047c9b9f650335f2837ea98",
+      "promptHash": "sha256:7baf40aa94b8609cbe0596cb8d137d3cd0246d572450c2a24967e98dc74bc9a4",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "sha256": "sha256:1f386a0944f29d704b68d60f5d74b96bebf8318de615ba5446dbc8d901580745",
+      "raw": ".assetgen/raw/8364340939f7ff57.png",
+      "references": [],
+      "quality": {
+        "passed": false,
+        "checks": {
+          "exact-size": true,
+          "alpha-required": true,
+          "alpha-nonempty": true,
+          "bounds": false
+        }
+      },
+      "export": true,
+      "usage": "img",
+      "usageHints": {
+        "primary": "img",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/logos/meridian.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "512px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "northgate.png",
+      "type": "image",
+      "kind": "icon",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-1.5",
+      "path": "assets/generated/frontend/public/logos/northgate.png",
+      "metadataPath": "assets/generated/frontend/public/logos/northgate.assetgen.json",
+      "operationHash": "sha256:5fa2e38011aabf75f5cbdcbcbfa95de84b64c30ef805c68bb17f72bad9e2c98b",
+      "promptHash": "sha256:e9ca819d285c429a2a1e4fb1960a6f9c220919d24cfb8db6c925f31016170b1c",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "hasAlpha": true,
+      "sha256": "sha256:39852f1a41fd991922f1defcb2792f900065e83a4d3a686337841c465d435bac",
+      "raw": ".assetgen/raw/d6759b21ba9e8d9a.png",
+      "references": [],
+      "quality": {
+        "passed": false,
+        "checks": {
+          "exact-size": true,
+          "alpha-required": true,
+          "alpha-nonempty": true,
+          "bounds": false
+        }
+      },
+      "export": true,
+      "usage": "img",
+      "usageHints": {
+        "primary": "img",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/logos/northgate.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "512px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "prism.png",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/icons/prism.png",
+      "metadataPath": "assets/generated/frontend/public/icons/prism.assetgen.json",
+      "operationHash": "sha256:e979d04b646becdbbe3b083e5619c3b7d93e553aa384a5675c04ae3f44ecb043",
+      "promptHash": "sha256:88e919f187f27532b3c984d3726ff89a71928c01ff56e8ff7605f5e288ef8258",
+      "width": 256,
+      "height": 256,
+      "format": "png",
+      "hasAlpha": false,
+      "sha256": "sha256:4ac525bddaf41ef6b0a93d6f129d5832ff8880e161558fd898c9af6d8088946e",
+      "raw": ".assetgen/raw/307b1aceaf3517bb.png",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/icons/prism.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "256px",
+          "height": "256px"
+        }
+      }
+    },
+    {
+      "id": "prism.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/prism.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/prism.assetgen.json",
+      "operationHash": "sha256:6cb40dd99c856033215e6be863f0bbd4c710805c1fac9e00cbce048d37d51e9d",
+      "promptHash": "sha256:2a4c9c03b643730af0a2502c32d73fde3a765506d53e97280389d3fc337a68ec",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:1f03d5e86dbb41e7f1a272d85b6240b9e93e69906b6b6c3397a08b31c35ce8be",
+      "raw": ".assetgen/raw/6f12b2b24e5929cc.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/prism.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "rewind-2.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/rewind-2.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/rewind-2.assetgen.json",
+      "operationHash": "sha256:8641ceae639a97cfc1d152d21caea59318c8b20e7cb56111f6e9d2aaeb302eb8",
+      "promptHash": "sha256:1940af1dca2f131357fafce8346e1a2f7afc4d672f3447c7322b369672ebee47",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:61bd048d449705248632c00e98e677f6d469bdcc523f2e2f1e132ff04cdc11b1",
+      "raw": ".assetgen/raw/6d5e597f87717613.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/rewind-2.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "rewind.png",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/icons/rewind.png",
+      "metadataPath": "assets/generated/frontend/public/icons/rewind.assetgen.json",
+      "operationHash": "sha256:808df9967e6fc1c0f38027e829f0419236442d693f5a22adda9c76e54a7d6a66",
+      "promptHash": "sha256:be584a8dca73a2b3b75087f90ac9967d9202d8bf60f0bcdfdb822050c2238592",
+      "width": 256,
+      "height": 256,
+      "format": "png",
+      "hasAlpha": false,
+      "sha256": "sha256:fae234d262fd7a063e3fe042d5d4486b44e2c9c8b271340d84fa0931b343b1e4",
+      "raw": ".assetgen/raw/1d83cc1f20aecd8f.png",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/icons/rewind.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "256px",
+          "height": "256px"
+        }
+      }
+    },
+    {
+      "id": "rewind.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/rewind.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/rewind.assetgen.json",
+      "operationHash": "sha256:3c51a209fe3e01cf59ca5380392aae2781005cfe774be77655998dcb840c2512",
+      "promptHash": "sha256:5c6fff7e7aa43e8fec536986f520a955f03f3d56d07874b0d9502f007d4dd136",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:bd26aac63f4031795cfa314516ff878213fbde7584746359367b1592ff4a3b98",
+      "raw": ".assetgen/raw/8efb2ecbcd2e7754.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/rewind.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "sable-2.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/sable-2.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/sable-2.assetgen.json",
+      "operationHash": "sha256:cb91e1345447af85e4827e12a675d831be0916e5b0af23629d063349e47c81d0",
+      "promptHash": "sha256:a8a5478942977233a7f06f823c9c5bb5024257f4804bd502b97c2690ef2a2abb",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:1c98f753902cddde79d995ca2d77eda6c0609d1396909c95ea6bfcf2ad35faf8",
+      "raw": ".assetgen/raw/b04cacf24a0636fd.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/sable-2.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "sable-3.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/sable-3.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/sable-3.assetgen.json",
+      "operationHash": "sha256:360929596c596ada1f51464fdccd328345c1ceaf21b56154d0b2e769d2497f23",
+      "promptHash": "sha256:f481d8298c297645bd711bb3655f467d52037387000a8101c71ec9db6c921392",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:600c8dfb13571681cb4a1e59d836edbf31f4307ed019e1ff6a1466ad6c1b001f",
+      "raw": ".assetgen/raw/ad8ad581efa1367a.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/sable-3.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "sable.png",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/icons/sable.png",
+      "metadataPath": "assets/generated/frontend/public/icons/sable.assetgen.json",
+      "operationHash": "sha256:7197ed9b23152b94e0609f130af38226a975041bde289117bae9398c6888f90c",
+      "promptHash": "sha256:057485633832a5190c03749a604fb486cbf742201385933aa814c5f852837aa4",
+      "width": 256,
+      "height": 256,
+      "format": "png",
+      "hasAlpha": false,
+      "sha256": "sha256:37b4ea3b2f8f439ebb4abadd2689b3dad78eb2a2d249cc074e4e3f458c6be67b",
+      "raw": ".assetgen/raw/1f25f8fb20a968fa.png",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/icons/sable.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "256px",
+          "height": "256px"
+        }
+      }
+    },
+    {
+      "id": "sable.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/sable.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/sable.assetgen.json",
+      "operationHash": "sha256:75354289f32eb2f7bde22ec170b93c8e8156ce9593927243bce7ce4d45a24d5b",
+      "promptHash": "sha256:ecc23ea2167801765fccef973510ec56ada33dc22ff12f5dd917e8b6dcf5c352",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:d41a57587dad09e5a14ab3738336746c37152197b5b8201d39d75c0611597444",
+      "raw": ".assetgen/raw/4e01a7e8ee15a662.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/sable.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    },
+    {
+      "id": "tilecast.png",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/icons/tilecast.png",
+      "metadataPath": "assets/generated/frontend/public/icons/tilecast.assetgen.json",
+      "operationHash": "sha256:6f552c5177fa2c429741ad2610090d7c7f4cf06417e5371d62749c49a96628ef",
+      "promptHash": "sha256:ed9ba98d6e67c8753c239b329fcb135869162fb465c07229c0a468622a9888ca",
+      "width": 256,
+      "height": 256,
+      "format": "png",
+      "hasAlpha": false,
+      "sha256": "sha256:ea2e80d7ae1fbb01ff9c623976d6a697a1a778df93469f5f0dac7e82f81cc23a",
+      "raw": ".assetgen/raw/ddcfdca4cf5721fd.png",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/icons/tilecast.png",
+          "alt": ""
+        },
+        "css": {
+          "width": "256px",
+          "height": "256px"
+        }
+      }
+    },
+    {
+      "id": "tilecast.webp",
+      "type": "image",
+      "kind": "hero-still",
+      "mode": "generate",
+      "provider": "openai",
+      "api": "image",
+      "model": "gpt-image-2",
+      "path": "assets/generated/frontend/public/shots/tilecast.webp",
+      "metadataPath": "assets/generated/frontend/public/shots/tilecast.assetgen.json",
+      "operationHash": "sha256:bd13ed595417b7a654092fc9d51549494e15193d9256f467fdcef6dbc32a7ca1",
+      "promptHash": "sha256:f1ff99b280a9916fae2a9c7d7697050bf51808fdc5d3f99ef906cc9ea76b3d77",
+      "width": 768,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": false,
+      "sha256": "sha256:609b9aa4fe8c5a79c0517c29f70a8803f4de620ed703cc571456f8b55ec3e715",
+      "raw": ".assetgen/raw/73078564e462e2eb.webp",
+      "references": [],
+      "quality": {
+        "passed": true,
+        "checks": {
+          "exact-size": true
+        }
+      },
+      "export": true,
+      "usage": "picture",
+      "usageHints": {
+        "primary": "picture",
+        "htmlTag": "img",
+        "attributes": {
+          "src": "assets/generated/frontend/public/shots/tilecast.webp",
+          "alt": ""
+        },
+        "css": {
+          "width": "768px",
+          "height": "512px"
+        }
+      }
+    }
+  ]
+}

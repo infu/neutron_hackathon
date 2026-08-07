@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "prism.webp",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T17:20:08.607Z",
+  "prompt": "A clean, modern desktop app screenshot for a capability inspector — a tool showing exactly what an application is permitted to reach. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a left tree of nested permission groups with small expand chevrons and toggle pills, and a wide right pane showing a permission matrix — a grid of rows against columns with small filled and hollow status dots marking granted and denied. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single deep green accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+  "promptHash": "sha256:2a4c9c03b643730af0a2502c32d73fde3a765506d53e97280389d3fc337a68ec",
+  "operationHash": "sha256:6cb40dd99c856033215e6be863f0bbd4c710805c1fac9e00cbce048d37d51e9d",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A clean, modern desktop app screenshot for a capability inspector — a tool showing exactly what an application is permitted to reach. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a left tree of nested permission groups with small expand chevrons and toggle pills, and a wide right pane showing a permission matrix — a grid of rows against columns with small filled and hollow status dots marking granted and denied. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single deep green accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      768,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "webp",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/shots/prism.webp",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/6f12b2b24e5929cc.webp",
+    "final": "assets/generated/frontend/public/shots/prism.webp",
+    "width": 768,
+    "height": 512,
+    "format": "webp",
+    "hasAlpha": false,
+    "sha256": "sha256:1f03d5e86dbb41e7f1a272d85b6240b9e93e69906b6b6c3397a08b31c35ce8be"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

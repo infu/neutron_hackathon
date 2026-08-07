@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "sable-3.webp",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T23:38:30.354Z",
+  "prompt": "A clean, modern desktop app screenshot: the sharing dialog of an encrypted note-taking tool, shown over a dimmed page. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no cursor. Layout: a centred white dialog card holding a list of four recipient rows — each a small circular avatar placeholder, two grey text bars, and a permission pill on the right — with a violet primary button and a plain secondary button at the bottom. A closed-padlock glyph sits top right of the dialog. Visual style: near-white cool grey background, pure white dialog, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no 3D. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+  "promptHash": "sha256:f481d8298c297645bd711bb3655f467d52037387000a8101c71ec9db6c921392",
+  "operationHash": "sha256:360929596c596ada1f51464fdccd328345c1ceaf21b56154d0b2e769d2497f23",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A clean, modern desktop app screenshot: the sharing dialog of an encrypted note-taking tool, shown over a dimmed page. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no cursor. Layout: a centred white dialog card holding a list of four recipient rows — each a small circular avatar placeholder, two grey text bars, and a permission pill on the right — with a violet primary button and a plain secondary button at the bottom. A closed-padlock glyph sits top right of the dialog. Visual style: near-white cool grey background, pure white dialog, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no 3D. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      768,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "webp",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/shots/sable-3.webp",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/ad8ad581efa1367a.webp",
+    "final": "assets/generated/frontend/public/shots/sable-3.webp",
+    "width": 768,
+    "height": 512,
+    "format": "webp",
+    "hasAlpha": false,
+    "sha256": "sha256:600c8dfb13571681cb4a1e59d836edbf31f4307ed019e1ff6a1466ad6c1b001f"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "prism.png",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T17:22:04.027Z",
+  "prompt": "A modern app icon: a rounded-square tile with a flat deep green fill, containing one bold centred white glyph of a triangular prism splitting a single incoming beam into three diverging rays. Flat vector style, no gradients, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+  "promptHash": "sha256:88e919f187f27532b3c984d3726ff89a71928c01ff56e8ff7605f5e288ef8258",
+  "operationHash": "sha256:e979d04b646becdbbe3b083e5619c3b7d93e553aa384a5675c04ae3f44ecb043",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A modern app icon: a rounded-square tile with a flat deep green fill, containing one bold centred white glyph of a triangular prism splitting a single incoming beam into three diverging rays. Flat vector style, no gradients, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      256,
+      256
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/icons/prism.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/307b1aceaf3517bb.png",
+    "final": "assets/generated/frontend/public/icons/prism.png",
+    "width": 256,
+    "height": 256,
+    "format": "png",
+    "hasAlpha": false,
+    "sha256": "sha256:4ac525bddaf41ef6b0a93d6f129d5832ff8880e161558fd898c9af6d8088946e"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

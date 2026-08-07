@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "lantern.webp",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T16:35:21.576Z",
+  "prompt": "A clean, modern desktop app screenshot for a design-system component library. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a component gallery — a grid of white cards each previewing one abstract UI component: a button, a toggle switch, a slider, a small avatar row, a progress bar, a segmented control. A narrow left sidebar lists categories. One amber accent swatch row sits near the top. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single warm amber accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+  "promptHash": "sha256:6f75b063e82e6d64392c14f2cda32c7409f021180e86612781abb89188b251ab",
+  "operationHash": "sha256:f7cba1fea73f1a300038805e5c1a673db6e23e7f3881853e59e9804647f53a90",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A clean, modern desktop app screenshot for a design-system component library. Flat straight-on view of the interface only — no browser chrome, no window title bar, no device frame, no desktop background, no cursor. Layout: a component gallery — a grid of white cards each previewing one abstract UI component: a button, a toggle switch, a slider, a small avatar row, a progress bar, a segmented control. A narrow left sidebar lists categories. One amber accent swatch row sits near the top. Visual style: near-white cool grey page background, pure white panels, hairline light grey borders, 4px corner radius, generous whitespace, completely flat with no gradients, no glow, no shadows, no 3D, no photographic elements. Single warm amber accent colour used sparingly. CRITICAL: render every piece of text as soft light-grey rounded placeholder bars of varying widths. Absolutely no legible letters, words, numbers, or logos anywhere in the image.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      768,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "webp",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/shots/lantern.webp",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/c02f326d23991f9b.webp",
+    "final": "assets/generated/frontend/public/shots/lantern.webp",
+    "width": 768,
+    "height": 512,
+    "format": "webp",
+    "hasAlpha": false,
+    "sha256": "sha256:7915289d241e832cf6ddc692130150c2c08453c9b528374893608924daaf02c2"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

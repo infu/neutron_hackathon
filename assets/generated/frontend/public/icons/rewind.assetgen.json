@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "rewind.png",
+  "type": "image",
+  "kind": "hero-still",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-2",
+  "createdAt": "2026-08-01T16:42:44.446Z",
+  "prompt": "A modern app icon: a rounded-square tile with a flat teal-cyan fill, containing one bold centred white glyph of a rewind symbol — two left-pointing triangles — sitting on a short horizontal timeline bar with three tick marks. Flat vector style, no gradients, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+  "promptHash": "sha256:be584a8dca73a2b3b75087f90ac9967d9202d8bf60f0bcdfdb822050c2238592",
+  "operationHash": "sha256:808df9967e6fc1c0f38027e829f0419236442d693f5a22adda9c76e54a7d6a66",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A modern app icon: a rounded-square tile with a flat teal-cyan fill, containing one bold centred white glyph of a rewind symbol — two left-pointing triangles — sitting on a short horizontal timeline bar with three tick marks. Flat vector style, no gradients, no bevel, no shadow, no border. The glyph is thick and simple enough to read clearly at 56 pixels. Absolutely no text, letters, numbers, or wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      256,
+      256
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": false,
+    "out": "assets/generated/frontend/public/icons/rewind.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/1d83cc1f20aecd8f.png",
+    "final": "assets/generated/frontend/public/icons/rewind.png",
+    "width": 256,
+    "height": 256,
+    "format": "png",
+    "hasAlpha": false,
+    "sha256": "sha256:fae234d262fd7a063e3fe042d5d4486b44e2c9c8b271340d84fa0931b343b1e4"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": true,
+    "checks": {
+      "exact-size": true
+    }
+  },
+  "export": true
+}

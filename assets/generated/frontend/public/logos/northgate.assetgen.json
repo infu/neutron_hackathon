@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "northgate.png",
+  "type": "image",
+  "kind": "icon",
+  "mode": "generate",
+  "provider": "openai",
+  "api": "image",
+  "model": "gpt-image-1.5",
+  "createdAt": "2026-08-01T16:36:50.730Z",
+  "prompt": "A minimal geometric corporate logo mark: an upward-pointing chevron shaped like a stylised gate arch, built from three nested angular strokes of decreasing size. Flat vector style, solid deep green, uniform stroke weight, precise symmetric geometry, no container shape, no badge, no circle behind it. Transparent background, tight optical bounds, centred. Absolutely no text, no letters, no numbers, no wordmark.",
+  "promptHash": "sha256:e9ca819d285c429a2a1e4fb1960a6f9c220919d24cfb8db6c925f31016170b1c",
+  "operationHash": "sha256:5fa2e38011aabf75f5cbdcbcbfa95de84b64c30ef805c68bb17f72bad9e2c98b",
+  "request": {
+    "mode": "generate",
+    "api": "image",
+    "prompt": "A minimal geometric corporate logo mark: an upward-pointing chevron shaped like a stylised gate arch, built from three nested angular strokes of decreasing size. Flat vector style, solid deep green, uniform stroke weight, precise symmetric geometry, no container shape, no badge, no circle behind it. Transparent background, tight optical bounds, centred. Absolutely no text, no letters, no numbers, no wordmark.",
+    "model": "auto",
+    "references": [],
+    "finalSize": [
+      512,
+      512
+    ],
+    "fit": "contain",
+    "outputFormat": "png",
+    "transparent": true,
+    "out": "assets/generated/frontend/public/logos/northgate.png",
+    "force": false,
+    "rawDir": ".assetgen/raw",
+    "promptLogging": "full"
+  },
+  "outputs": {
+    "raw": ".assetgen/raw/d6759b21ba9e8d9a.png",
+    "final": "assets/generated/frontend/public/logos/northgate.png",
+    "width": 512,
+    "height": 512,
+    "format": "png",
+    "hasAlpha": true,
+    "sha256": "sha256:39852f1a41fd991922f1defcb2792f900065e83a4d3a686337841c465d435bac"
+  },
+  "references": [],
+  "usage": {
+    "providerMetadata": {}
+  },
+  "quality": {
+    "passed": false,
+    "checks": {
+      "exact-size": true,
+      "alpha-required": true,
+      "alpha-nonempty": true,
+      "bounds": false
+    }
+  },
+  "export": true
+}
